@@ -419,13 +419,13 @@ a:hover { color: var(--primary-bright); }
 .portrait {
   margin: 0;
   position: relative;
-  width: min(100%, 170px);
+  width: min(100%, 113px);
 }
 
 .portrait::before {
   content: "";
   position: absolute;
-  inset: 8px -8px -8px 8px;
+  inset: 6px -6px -6px 6px;
   border-radius: var(--radius);
   border: 1px solid var(--accent);
   opacity: 0.4;
@@ -1033,8 +1033,8 @@ footer {
   }
 
   .hero-visual { order: -1; justify-items: start; }
-  .portrait { width: min(100%, 150px); }
-  .portrait::before { inset: 7px -7px -7px 7px; }
+  .portrait { width: min(100%, 100px); }
+  .portrait::before { inset: 5px -5px -5px 5px; }
   .mini-stats { width: 100%; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
 
   .about-grid { grid-template-columns: 1fr; gap: 1.8rem; }
