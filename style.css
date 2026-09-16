@@ -419,13 +419,13 @@ a:hover { color: var(--primary-bright); }
 .portrait {
   margin: 0;
   position: relative;
-  width: min(100%, 340px);
+  width: min(100%, 170px);
 }
 
 .portrait::before {
   content: "";
   position: absolute;
-  inset: 14px -14px -14px 14px;
+  inset: 8px -8px -8px 8px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--accent);
   opacity: 0.4;
@@ -437,7 +437,7 @@ a:hover { color: var(--primary-bright); }
   aspect-ratio: 1 / 1.12;
   object-fit: cover;
   object-position: center 22%;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-lg);
 }
@@ -1035,8 +1035,8 @@ footer {
   }
 
   .hero-visual { order: -1; justify-items: start; }
-  .portrait { width: min(100%, 260px); }
-  .portrait::before { inset: 10px -10px -10px 10px; }
+  .portrait { width: min(100%, 150px); }
+  .portrait::before { inset: 7px -7px -7px 7px; }
   .mini-stats { width: 100%; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
 
   .about-grid { grid-template-columns: 1fr; gap: 1.8rem; }
