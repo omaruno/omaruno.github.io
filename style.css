@@ -1023,6 +1023,199 @@ footer {
 
 .footer-inner p { margin: 0; }
 
+
+/* ------------------------------------------------- subpage hero (projects) --- */
+
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(56rem 26rem at 10% -30%, var(--hero-glow-a), transparent 65%),
+    radial-gradient(44rem 24rem at 90% -10%, var(--hero-glow-b), transparent 62%),
+    linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.page-hero-inner {
+  padding: 3rem 0 2.6rem;
+}
+
+.page-hero h1 {
+  font-family: var(--font-display);
+  margin: 0.9rem 0 0;
+  font-size: clamp(2.3rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+}
+
+.page-hero-lede {
+  max-width: 62ch;
+  margin: 0.9rem 0 0;
+  font-size: 1.04rem;
+  color: var(--text-soft);
+}
+
+.page-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  margin: 1.3rem 0 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.page-hero-meta a {
+  color: var(--muted);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+}
+
+.page-hero-meta a:hover {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+.page-hero-meta span { color: var(--border-strong); }
+
+/* --------------------------------------------------------------- projects --- */
+
+.project-list {
+  list-style: none;
+  display: grid;
+  gap: 1.3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  gap: 1.9rem;
+  align-items: start;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem 1.7rem;
+  box-shadow: var(--shadow-sm);
+  scroll-margin-top: 96px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.project-figure {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+  padding: 0.6rem;
+  overflow: hidden;
+}
+
+.project-figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Shared vocabulary for the small schematic figures next to each project. */
+.fig-dots-a circle { fill: var(--primary); opacity: 0.85; }
+.fig-dots-b circle { fill: var(--accent); opacity: 0.85; }
+.fig-dots-c circle { fill: var(--muted); opacity: 0.7; }
+
+.fig-axis {
+  fill: none;
+  stroke: var(--border-strong);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+
+.fig-curve-a {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+}
+
+.fig-curve-b {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+}
+
+.fig-line {
+  fill: none;
+  stroke: var(--border-strong);
+  stroke-width: 1.6;
+}
+
+.fig-line-dashed {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.6;
+  stroke-dasharray: 5 5;
+  opacity: 0.75;
+}
+
+.fig-chip {
+  fill: var(--accent-soft);
+  stroke: color-mix(in srgb, var(--accent) 45%, transparent);
+  stroke-width: 1.2;
+}
+
+.fig-band {
+  fill: color-mix(in srgb, var(--primary) 9%, transparent);
+  stroke: none;
+}
+
+.project-index {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.project-body h2 {
+  font-family: var(--font-display);
+  margin: 0.35rem 0 0.5rem;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  line-height: 1.22;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+}
+
+.project-meta {
+  margin: 0 0 0.85rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.project-body > p {
+  margin: 0 0 0.9rem;
+  max-width: 72ch;
+  color: var(--text-soft);
+  font-size: 0.99rem;
+}
+
+.project-body > p:last-child { margin-bottom: 0; }
+
+@media (max-width: 860px) {
+  .project {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    padding: 1.3rem 1.2rem;
+  }
+
+  .project-figure { max-width: 420px; }
+}
 /* ------------------------------------------------------------ responsive --- */
 
 @media (max-width: 960px) {

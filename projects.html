@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Research projects by Omar Coser — ELISA, an interpretable agent for single-cell genomics; self-pretraining for sequence classification; deep learning for locomotion analysis in lower-limb exoskeletons; self-pretraining for medical time series.">
+  <meta name="author" content="Omar Coser">
+  <meta name="keywords" content="Omar Coser, projects, ELISA, single-cell genomics, self-pretraining, transformers, time series, exoskeletons">
+  <link rel="canonical" href="https://omaruno.github.io/projects.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects | Omar Coser">
+  <meta property="og:description" content="Research projects on agentic AI for biology, self-supervised pretraining and neural models for time series.">
+  <meta property="og:url" content="https://omaruno.github.io/projects.html">
+  <meta property="og:image" content="https://omaruno.github.io/assets/Omar2026.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <title>Projects | Omar Coser</title>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23123d73'/><text y='.92em' x='50%25' text-anchor='middle' font-size='52' font-family='Segoe UI,sans-serif' font-weight='700' fill='white'>OC</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    // Applied before first paint so the saved theme renders without a flash.
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "dark" || saved === "light") {
+          document.documentElement.setAttribute("data-theme", saved);
+        }
+      } catch (e) { /* storage unavailable — fall back to prefers-color-scheme */ }
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav-bar" aria-label="Main navigation">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">OC</span>
+          <span class="brand-name">Omar Coser</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="index.html#about">About</a>
+          <a href="index.html#research">Research</a>
+          <a class="active" href="projects.html" aria-current="page">Projects</a>
+          <a href="index.html#publications">Publications</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#awards">Awards</a>
+          <a href="index.html#news">News</a>
+          <a href="index.html#contact">Contact</a>
+          <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch colour theme" title="Switch colour theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><g stroke-linecap="round"><path d="M12 2.6v2.2"/><path d="M12 19.2v2.2"/><path d="M2.6 12H4.8"/><path d="M19.2 12h2.2"/><path d="M5.5 5.5 7 7"/><path d="M17 17l1.5 1.5"/><path d="M18.5 5.5 17 7"/><path d="M7 17l-1.5 1.5"/></g></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5a8.5 8.5 0 1 0 10.8 10.8Z"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="page-hero">
+      <div class="container page-hero-inner">
+        <span class="eyebrow">Selected work</span>
+        <h1>Projects</h1>
+        <p class="page-hero-lede">
+          Four projects that between them cover most of what I do: an interpretable agent for single-cell
+          genomics, two studies asking whether self-pretraining really earns its keep, and a comparative
+          study of deep models for human locomotion. Each entry links to the paper and, where available,
+          the preprint.
+        </p>
+        <p class="page-hero-meta">
+          <a href="index.html#publications">Full publication list</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://scholar.google.com/citations?user=3qxAnicAAAAJ&amp;hl=it" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://github.com/omaruno" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <ol class="project-list">
+
+        <li class="project" id="elisa">
+          <div class="project-figure" aria-hidden="true">
+            <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid meet" focusable="false">
+              <g class="fig-dots-a">
+                <circle cx="58" cy="60" r="4"/><circle cx="70" cy="55" r="4"/><circle cx="80" cy="66" r="4"/>
+                <circle cx="63" cy="74" r="4"/><circle cx="76" cy="78" r="4"/><circle cx="88" cy="58" r="4"/>
+                <circle cx="55" cy="82" r="4"/><circle cx="72" cy="90" r="4"/><circle cx="86" cy="86" r="4"/>
+              </g>
+              <g class="fig-dots-b">
+                <circle cx="150" cy="112" r="4"/><circle cx="162" cy="104" r="4"/><circle cx="172" cy="118" r="4"/>
+                <circle cx="158" cy="126" r="4"/><circle cx="170" cy="134" r="4"/><circle cx="184" cy="112" r="4"/>
+                <circle cx="146" cy="130" r="4"/><circle cx="164" cy="142" r="4"/><circle cx="182" cy="128" r="4"/>
+              </g>
+              <g class="fig-dots-c">
+                <circle cx="238" cy="52" r="4"/><circle cx="250" cy="46" r="4"/><circle cx="262" cy="58" r="4"/>
+                <circle cx="244" cy="66" r="4"/><circle cx="258" cy="72" r="4"/><circle cx="270" cy="50" r="4"/>
+                <circle cx="234" cy="72" r="4"/><circle cx="252" cy="80" r="4"/><circle cx="268" cy="68" r="4"/>
+              </g>
+              <path class="fig-line-dashed" d="M96 72 L150 60 L228 56"/>
+              <rect class="fig-chip" x="118" y="162" width="88" height="22" rx="11"/>
+              <rect class="fig-chip" x="216" y="162" width="58" height="22" rx="11"/>
+              <path class="fig-line" d="M162 162 L162 150 L245 150 L245 162"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <span class="project-index" aria-hidden="true">01</span>
+            <h2>ELISA — an interpretable agent for single-cell genomics</h2>
+            <p class="project-meta"><em>Briefings in Bioinformatics</em> (Oxford University Press) · accepted 2026 · sole author</p>
+            <p>
+              ELISA is a hybrid generative AI agent for expression-grounded discovery in single-cell data.
+              The design point is interpretability: every claim the agent makes has to be tied back to
+              measured expression, so an annotation can be traced to the cells and genes that support it
+              rather than to the language model's priors. That constraint is what makes the output usable
+              as evidence instead of as a plausible-sounding summary.
+            </p>
+            <p class="links">
+              <a href="https://doi.org/10.1093/bib/bbag501" target="_blank" rel="noopener noreferrer">DOI</a>
+              <a href="https://arxiv.org/abs/2603.11872" target="_blank" rel="noopener noreferrer">arXiv:2603.11872</a>
+            </p>
+            <p class="tags"><span class="tag">Agentic AI</span><span class="tag">Single-cell genomics</span><span class="tag accent">Full APC waiver</span></p>
+          </div>
+        </li>
+
+        <li class="project" id="self-pretraining">
+          <div class="project-figure" aria-hidden="true">
+            <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid meet" focusable="false">
+              <path class="fig-axis" d="M40 26 L40 166 L292 166"/>
+              <path class="fig-curve-a" d="M44 150 C 90 78, 140 58, 288 52"/>
+              <path class="fig-curve-b" d="M44 160 C 96 104, 150 70, 288 58"/>
+              <path class="fig-line-dashed" d="M40 55 L288 55"/>
+              <g class="fig-dots-a"><circle cx="288" cy="52" r="4.5"/></g>
+              <g class="fig-dots-b"><circle cx="288" cy="58" r="4.5"/></g>
+              <g class="fig-axis">
+                <path d="M40 166 L40 173"/><path d="M103 166 L103 173"/>
+                <path d="M166 166 L166 173"/><path d="M229 166 L229 173"/><path d="M292 166 L292 173"/>
+              </g>
+            </svg>
+          </div>
+          <div class="project-body">
+            <span class="project-index" aria-hidden="true">02</span>
+            <h2>Towards understanding self-pretraining for sequence classification</h2>
+            <p class="project-meta">Under review · earlier version at the <em>ES-FoMo&nbsp;III</em> workshop on efficient systems for foundation models, ICML 2025 · with L. Zollo, P. Soda and A. Orvieto</p>
+            <p>
+              Self-pretraining — pretraining a transformer on the very dataset it will later be fine-tuned on —
+              is widely reported to help sequence classification. This project asks how much of that gain
+              survives a properly tuned randomly initialised baseline, which turns the interesting question
+              from whether the trick works into which data and optimisation regimes it actually needs.
+              Carried out in the Deep Models and Optimization group at the Max Planck Institute for
+              Intelligent Systems and the ELLIS Institute Tübingen.
+            </p>
+            <p class="links">
+              <a href="https://arxiv.org/abs/2605.21070" target="_blank" rel="noopener noreferrer">arXiv:2605.21070</a>
+              <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=it&amp;user=3qxAnicAAAAJ&amp;citation_for_view=3qxAnicAAAAJ:qjMakFHDy7sC" target="_blank" rel="noopener noreferrer">Scholar</a>
+            </p>
+            <p class="tags"><span class="tag">Self-supervised pretraining</span><span class="tag">Transformers</span><span class="tag">Rigorous baselines</span></p>
+          </div>
+        </li>
+
+        <li class="project" id="locomotion">
+          <div class="project-figure" aria-hidden="true">
+            <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid meet" focusable="false">
+              <rect class="fig-band" x="40" y="32" width="72" height="132" rx="6"/>
+              <rect class="fig-band" x="184" y="32" width="72" height="132" rx="6"/>
+              <path class="fig-axis" d="M40 98 L292 98"/>
+              <path class="fig-curve-a" d="M40 98 C 64 42, 88 42, 112 98 C 136 154, 160 154, 184 98 C 208 42, 232 42, 256 98 C 272 132, 284 126, 292 112"/>
+              <path class="fig-curve-b" d="M40 118 C 68 74, 92 130, 116 112 C 140 94, 164 140, 188 116 C 212 92, 240 132, 264 110 C 276 100, 286 104, 292 100"/>
+              <g class="fig-dots-b">
+                <circle cx="112" cy="98" r="4"/><circle cx="184" cy="98" r="4"/><circle cx="256" cy="98" r="4"/>
+              </g>
+            </svg>
+          </div>
+          <div class="project-body">
+            <span class="project-index" aria-hidden="true">03</span>
+            <h2>Deep learning for human locomotion analysis in lower-limb exoskeletons</h2>
+            <p class="project-meta"><em>Frontiers in Computer Science</em>, vol.&nbsp;7, 2025 · with C. Tamantini, M. Tortora and colleagues</p>
+            <p>
+              A comparative study of deep learning architectures for analysing human locomotion from data
+              recorded on instrumented lower-limb exoskeletons. The signals are the awkward kind — multivariate,
+              noisy, and scarce relative to the models people want to apply to them — so the value of the study
+              is in putting the architectures under one shared protocol and seeing which differences hold up.
+              Work done in the Unit of Advanced Robotics and Human-Centered Technologies at Università Campus
+              Bio-Medico di Roma.
+            </p>
+            <p class="links">
+              <a href="https://doi.org/10.3389/fcomp.2025.1597143" target="_blank" rel="noopener noreferrer">DOI</a>
+              <a href="https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2025.1597143/full" target="_blank" rel="noopener noreferrer">Full text</a>
+            </p>
+            <p class="tags"><span class="tag">Time series</span><span class="tag">Wearable robotics</span><span class="tag">Benchmarking</span></p>
+          </div>
+        </li>
+
+        <li class="project" id="medical-time-series">
+          <div class="project-figure" aria-hidden="true">
+            <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid meet" focusable="false">
+              <path class="fig-axis" d="M40 54 L292 54 M40 104 L292 104 M40 154 L292 154"/>
+              <g class="fig-curve-b">
+                <path d="M56 54 v-16"/><path d="M84 54 v-10"/><path d="M132 54 v-22"/><path d="M158 54 v-13"/>
+                <path d="M212 54 v-18"/><path d="M268 54 v-9"/>
+                <path d="M48 104 v-14"/><path d="M96 104 v-21"/><path d="M110 104 v-8"/><path d="M186 104 v-17"/>
+                <path d="M238 104 v-12"/><path d="M280 104 v-20"/>
+                <path d="M64 154 v-11"/><path d="M120 154 v-19"/><path d="M170 154 v-7"/><path d="M198 154 v-16"/>
+                <path d="M250 154 v-22"/><path d="M262 154 v-10"/>
+              </g>
+              <g class="fig-dots-a">
+                <circle cx="56" cy="38" r="3"/><circle cx="132" cy="32" r="3"/><circle cx="212" cy="36" r="3"/>
+                <circle cx="96" cy="83" r="3"/><circle cx="186" cy="87" r="3"/><circle cx="280" cy="84" r="3"/>
+                <circle cx="120" cy="135" r="3"/><circle cx="250" cy="132" r="3"/>
+              </g>
+              <path class="fig-line-dashed" d="M40 176 L292 176"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <span class="project-index" aria-hidden="true">04</span>
+            <h2>Is self-pretraining really useful to improve diagnosis in medical time series?</h2>
+            <p class="project-meta">Submitted to the <em>NeurIPS workshop on Responsible Communication of Machine Learning Research in Biomedicine</em> · with A. Orvieto, P. Soda and L. Zollo</p>
+            <p>
+              The clinical counterpart to the sequence-classification study. If self-pretraining helps anywhere it
+              ought to help here, because labelled clinical recordings are exactly what you never have enough of.
+              Testing that against careful baselines gives a deflationary answer, which is why the work is framed
+              as much around how such results get communicated in biomedicine as around the result itself.
+              Presented as a talk at the MedicinAI workshop, University of Trento, in December 2025.
+            </p>
+            <p class="links">
+              <a href="https://arxiv.org/abs/2608.06122" target="_blank" rel="noopener noreferrer">arXiv:2608.06122</a>
+              <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=it&amp;user=3qxAnicAAAAJ&amp;citation_for_view=3qxAnicAAAAJ:ufrVoPGSRksC" target="_blank" rel="noopener noreferrer">Scholar</a>
+            </p>
+            <p class="tags"><span class="tag">Medical time series</span><span class="tag">Self-supervised pretraining</span><span class="tag">Negative results</span></p>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+
+    <section class="section contact">
+      <div class="contact-panel">
+        <span class="pill">Contact</span>
+        <h2>Interested in one of these?</h2>
+        <p>
+          Happy to go into detail on any of the four — the setup, the baselines, or what I would do differently
+          next time. Email is the fastest way to reach me.
+        </p>
+
+        <div class="buttons">
+          <a href="mailto:omarcoser10@gmail.com" class="btn primary">omarcoser10@gmail.com</a>
+          <a href="assets/Omar_Coser_CV.pdf" class="btn secondary" target="_blank" rel="noopener noreferrer">Curriculum Vitae</a>
+          <a href="index.html#publications" class="btn ghost">All publications</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Omar Coser</p>
+      <p class="muted">Built with plain HTML and CSS · hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
