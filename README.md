@@ -1,7 +1,6 @@
 # omaruno.github.io
 
-Personal academic website of **Omar Coser** — PhD in Artificial Intelligence (Health & Life Sciences),
-guest researcher at the Max Planck Institute for Intelligent Systems, Tübingen.
+Personal academic website of **Omar Coser** — PhD in Artificial Intelligence (Health & Life Sciences)
 
 Live at <https://omaruno.github.io/>.
 
